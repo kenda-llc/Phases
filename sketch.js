@@ -1,4 +1,5 @@
 var player
+//var pickup
 var SCENE_W = 800;
 var SCENE_H = 516;
 function preload(){
@@ -6,9 +7,9 @@ function preload(){
 
 function setup() { //called once at the begining of the sketch
   createCanvas(300, 200); 
-player = createSprite(width*0.33, height*0.66, 22, 60)
-   player.addImage('player', "Player.png")
-  
+player = createSprite(width*0.33, height*0.66, 22, 60);
+   player.addImage('player', "Player.png");
+  //pickup.addImage('pickup', "pens.png");
    player.addAnimation('left', "leftWalk0.png", "leftwalk3.png");
    player.addAnimation('right', "rightWalk0.png", "rightWalk3.png");
   player.addAnimation('up', "upWalk.png", "upWalk.png");
@@ -49,6 +50,19 @@ player.changeAnimation('up')
     y += 5;
 
   }
-  
   drawSprites();
 }
+
+//function pickup(pickup){
+//Random number drawn between 1 and 6.
+//random location generation. 
+//Consistant Size, 0.5-1.0 of Player Size
+// before setup "let movement = 0" 
+//movement = 5;
+//set boundaries for edge of Scene. i.e. Roomba mode
+//remove pen pickup object upon collision/overlap with player sprite
+//}
+
+//add text at top of screen that says "You are out of drawing supplies and you are broke. Walk around town and pickup pens in the meantime"
+//add text count to track how many pens you have.
+//Win text when you collected 12 pens "Awesome, a perfect dozen should be plenty. Head on home and make some art"
