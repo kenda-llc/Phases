@@ -37,6 +37,7 @@ player = createSprite(width*0.33, height*0.66, 22, 60)                    //crea
    player.addImage('player', "Player.png")                             //adding an image to the sprite Player
   
    player.addAnimation('left', "leftWalk0.png", "leftwalk3.png");     //adding an animation to the sprite Players storage. ('label', "first.png", "last.png")
+   //player.addAnimation('idle', "playerIdle0", "playerIdle1");
    player.addAnimation('right', "rightWalk0.png", "rightWalk3.png");   //^ the library reference tells our compiler to grab any pngs between the declared two with the same naimng convention
   player.addAnimation('up', "upWalk.png", "upWalk.png");              //^^
   player.addAnimation('down', "downWalk.png", "downWalk.png");         //^^^
@@ -81,3 +82,20 @@ player.changeAnimation('up')                                        //if pressed
   
   drawSprites();                                                    //IMPORTANT: instructs the sprites to be drawn. Without this nothing happens.
 }
+
+
+*THINGS I WANT TO ADD TO THIS SKETCH
+//1) I want to add pens for the player to pickup as the walk around.
+//var pickup
+  //pickup.addImage('pickup', "pens.png");
+//function pickup(pickup){
+//Random number drawn between 1 and 6.
+//random location generation. 
+//Consistant Size, 0.5-1.0 of Player Size
+//floating/bouncing up and down pickup idle animaiton
+//remove pen pickup object upon collision/overlap with player sprite
+//}
+
+//add text at top of screen that says "You are out of drawing supplies and you are broke. Walk around town and pickup pens in the meantime"
+//add text count to track how many pens you have.
+//Win text when you collected 12 pens "Awesome, a perfect dozen should be plenty. Head on home and make some art"
